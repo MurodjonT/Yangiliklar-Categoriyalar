@@ -1,0 +1,211 @@
+{% load static %}
+
+
+<html lang="zxx"><head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>theRealNewsNetwork</title>
+    <!-- plugin css for this page -->
+  <link rel="stylesheet" href="/assets/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="assets/vendors/aos/dist/aos.css/aos.css">
+    <!-- End plugin css for this page -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+
+    <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!-- endinject -->
+  </head>
+<style>
+  #soz {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+</style>
+  <body>
+    <div class="container-scroller">
+      <div class="main-panel">
+        <!-- partial:partials/_navbar.html -->
+    
+
+    <header id="header">
+          <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <div class="navbar-top">
+                <div class="d-flex justify-content-between align-items-center">
+                  <ul class="navbar-top-left-menu">
+                    <li class="nav-item">
+                      <a href="pages/index-inner.html" class="nav-link">Advertise</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="pages/aboutus.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Events</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Write for Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">In the Press</a>
+                    </li>
+                  </ul>
+                  <ul class="navbar-top-right-menu">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Sign in</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="navbar-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <a class="navbar-brand" href="{% url 'index' %}"><img src="https://i0.wp.com/therealnews.com/wp-content/uploads/2020/09/logo-1.png?w=372&ssl=1" alt=""></a>
+                  </div>
+                  <div>
+                    <button class="navbar-toggler" type="button" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse justify-content-center collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav d-lg-flex justify-content-between align-items-center">
+                        <li>
+                          <button class="navbar-close">
+                            <i class="mdi mdi-close"></i>
+                          </button>
+                        </li>
+                        <li class="nav-item active">
+
+                          <a  href="{% url 'category' category_id=5 %}"
+                          class="nav-link">O'zbekiston</a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'category' category_id=7 %}">Jahon</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'category' category_id=8 %}">Iqtisodiyot</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'category' category_id=6 %}">Jamiyat</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'category' category_id=9 %}">Fan-Texnika</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'category' category_id=10 %}">Sport</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+
+
+        {% block content %}
+
+
+
+        {% endblock content %}
+
+
+            <!-- partial:partials/_footer.html -->
+        <footer>
+          <div class="footer-top">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-5">
+                  <img src="assets/images/logo.svg" class="footer-logo" alt="">
+                  <h5 class="font-weight-normal mt-4 mb-5">
+                    Gazeta - bu sizning yangiliklar, o'yin-kulgi, musiqa moda veb-sayti. Biz
+                    sizga eng so'nggi yangiliklar va videolarni to'g'ridan-to'g'ri taqdim etadi
+                    o'yin-kulgi sanoati.
+                  </h5>
+                  <ul class="social-media mb-3">
+                    <li>
+                      <a href="#">
+                        <i class="mdi mdi-facebook"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+       
+                <div class="col-sm-3">
+                  <h3 class="font-weight-bold mb-3">CATEGORIES</h3>
+                  <div class="footer-border-bottom pb-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                     <h5  class="mb-0 font-weight-600"> O'ZBEKISTON</h5> 
+                      <div class="count">11</div>
+                    </div>
+                  </div>
+                  <div class="footer-border-bottom pb-2 pt-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <h5 class="mb-0 font-weight-600">JAMIYAT</h5>
+                      <div class="count">18</div>
+                    </div>
+                  </div>
+                  <div class="footer-border-bottom pb-2 pt-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <h5 class="mb-0 font-weight-600">FAN-TEXNIKA</h5>
+                      <div class="count">3</div>
+                    </div>
+                  </div>
+                  <div class="footer-border-bottom pb-2 pt-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <h5 class="mb-0 font-weight-600">JAHON</h5>
+                      <div class="count">4</div>
+                    </div>
+                  </div>
+                  <div class="pt-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <h5 class="mb-0 font-weight-600">IQTISODIYOT</h5>
+                      <div class="count">5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="d-sm-flex justify-content-between align-items-center">
+                    <div class="fs-14 font-weight-600">
+                      © 2022 @ <a href="https://www.bootstrapdash.com/" target="_blank" class="text-white"> TurobOFFDEV</a>. All rights reserved.
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <!-- partial -->
+      </div>
+    </div>
+    <!-- inject:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- plugin js for this page -->
+    <script src="assets/vendors/aos/dist/aos.js/aos.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page-->
+    <script src="./assets/js/demo.js"></script>
+    <script src="./assets/js/jquery.easeScroll.js"></script>
+    <!-- End custom js for this page-->
+  
+
+</body></html>
